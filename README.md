@@ -206,67 +206,67 @@ The runtime was used for:
 
 Caption: Full build and CI-safe smoke build completed, producing `engine`, `monitor.ko`, and all workload binaries.
 
-![Build success](<Screenshot from 2026-04-16 20-10-19.png>)
+![Build success](screenshots/build-success.png)
 
 ### 2. Rootfs Preparation
 
 Caption: Alpine minirootfs downloaded and expanded, then copied into separate writable rootfs directories for different containers.
 
-![Rootfs setup](<Screenshot from 2026-04-16 20-15-36.png>)
+![Rootfs setup](screenshots/rootfs-setup.png)
 
 ### 3. Control Device and Module Load
 
 Caption: The kernel module was inserted successfully and created `/dev/container_monitor`.
 
-![Module load and device](<Screenshot from 2026-04-16 20-16-38.png>)
+![Module load and device](screenshots/module-load.png)
 
 ### 4. Supervisor Startup
 
 Caption: The long-running supervisor process started and listened on `/tmp/osjackfruit_supervisor.sock`.
 
-![Supervisor startup](<Screenshot from 2026-04-16 20-18-59.png>)
+![Supervisor startup](screenshots/supervisor-start.png)
 
 ### 5. Multi-Container Supervision and Metadata Tracking
 
 Caption: Two containers, `alpha` and `beta`, were started under one supervisor, and `engine ps` shows their tracked metadata.
 
-![Multi-container supervision](<Screenshot from 2026-04-16 20-25-22.png>)
+![Multi-container supervision](screenshots/multi-container.png)
 
 ### 6. CLI and Logging Pipeline
 
 Caption: CLI commands were issued to the supervisor, log retrieval worked, and metadata was updated after foreground runs.
 
-![CLI and logs](<Screenshot from 2026-04-16 20-36-26.png>)
+![CLI and logs](screenshots/cli-and-logs.png)
 
 ### 7. Soft-Limit Warning and Hard-Limit Enforcement
 
 Caption: Kernel logs show registration, soft-limit warning for `memSoft`, and hard-limit kill for `memHard`.
 
-![Kernel memory events](<Screenshot from 2026-04-16 20-43-06.png>)
+![Kernel memory events](screenshots/kernel-memory-events.png)
 
 ### 8. Supervisor Metadata Reflecting Hard-Limit Kill
 
 Caption: User-space metadata shows `memHard` as `hard_limit_killed`, while logs remain available for inspection.
 
-![Hard-limit metadata](<Screenshot from 2026-04-16 20-44-26.png>)
+![Hard-limit metadata](screenshots/hard-limit-metadata.png)
 
 ### 9. Scheduling Experiment: CPU vs CPU
 
 Caption: Two CPU-bound containers with different `nice` values completed successfully, and their logs were compared.
 
-![CPU vs CPU scheduling](<Screenshot from 2026-04-16 20-49-27.png>)
+![CPU vs CPU scheduling](screenshots/cpu-vs-cpu.png)
 
 ### 10. Scheduling Experiment: CPU vs IO
 
 Caption: CPU-bound and I/O-bound workloads ran concurrently; both completed and their outputs were captured.
 
-![CPU vs IO scheduling](<Screenshot from 2026-04-16 20-51-10.png>)
+![CPU vs IO scheduling](screenshots/cpu-vs-io.png)
 
 ### 11. Clean Teardown
 
 Caption: The kernel module was unloaded successfully and no zombie processes were present in `ps aux | grep defunct`.
 
-![Clean teardown](<Screenshot from 2026-04-16 21-17-23.png>)
+![Clean teardown](screenshots/clean-teardown.png)
 
 ## Scheduler Experiment Results
 
