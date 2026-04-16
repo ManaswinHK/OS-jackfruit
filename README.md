@@ -317,10 +317,3 @@ The final teardown run showed:
 - successful module unload
 - no zombie processes in `ps aux | grep defunct`
 
-## Submission Notes
-
-Before final submission, still verify:
-
-- fill in team member names and SRNs
-- ensure all commands reproduce cleanly on the final Ubuntu VM
-- keep the screenshot files in the repository if your faculty expects evidence inside the repo
